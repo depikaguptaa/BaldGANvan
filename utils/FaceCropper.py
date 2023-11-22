@@ -18,7 +18,7 @@ import scipy.ndimage
 
 class FaceCropper(object):
     def __init__(self, image_size , model_dir = "pretrained_models"):
-        self.landmarkDetector68 = face_alignment.FaceAlignment(face_alignment.LandmarksType._2D, flip_input=False)
+        self.landmarkDetector68 = face_alignment.FaceAlignment(face_alignment.LandmarksType.TWO_D, flip_input=False)
         self.image_size = image_size
         self.model_dir = model_dir
         self.landmark_model_name = 'shape_predictor_68_face_landmarks.dat'
